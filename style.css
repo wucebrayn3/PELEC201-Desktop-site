@@ -6,6 +6,10 @@
     src: url("https://fonts.googleapis.com");
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body, html{
     height: 100vh;
     width: 100vw;
@@ -21,19 +25,27 @@ body, html{
     position: relative;
 }
 
+.borgir{
+    display: none;
+}
+
 body::-webkit-scrollbar{
     display: none;
 }
 
-.header{
-    height: 10%;
-    max-height: 150px;
+header, .headerWrapper{
+    position: fixed;
+    height: 80px;
     width: 100%;
-    background-color: rgba(50,50,50,0.4);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100; /* CANNOT BE TRUSTED EASILY */
 }
+
 
 .menuCont a{
     transition: 0.3s;
@@ -61,391 +73,283 @@ body::-webkit-scrollbar{
     }
 }
 
-@media (min-width:1280px){
-    .headerSubCont{
+@media (min-width:1440px){
+    .header{
+        margin: 0;
+        background-color:rgba(50,50,50,0.6);
+        height: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        width: 100%;
         align-items: center;
-        width: 95%;
-        height: 100%;
-        & .logoImg{
-            height: 50%;
-            margin: 0;
-        }
-        & .searchCont{
-            margin: 0;
-            padding: 0;
-            position: relative;
-            height: 100%;
-            width: 40%;
-            & img{
-                width: 3%;
-                position: absolute;
-                right: calc(0% + 5px);
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
-        & .searchBar{
-            box-sizing: border-box;
-            position: relative;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            width: 100%;
-            height: 40%;
-            border: 1.5px rgba(230, 230, 230, 0.8) solid;
-            border-radius: 10px;
-            margin: 0;
-            background-color: rgba(250,250,250,0.4);
-            padding-left: 20px;
-            padding-right: 20px;
-            font-size: 90%;
-            
-        }
-        & .menuCont{
+        padding-left: 25px;
+        padding-right: 25px;
+        & .headerSubCont{
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
             align-items: center;
-            width: 30%;
-            margin: 0;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            & .logoImg{
+                width: 200px;
+            }
+        }
+        & .menuCont{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-sizing: border-box;
+            width: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             & a{
                 text-decoration: none;
-                color: white;
+                color:white;
+                font-size: 1.7em;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .orderNow{
+        height: 100%;
+        width: 23%;
+        min-width: 300px;
+        font-size: 1.7em;
+        font-weight: 600;
+        border: 0px;
+        border-radius: 100px;
+        background-color: rgba(250,250,250,0.4);
+    }
+}
+
+@media (max-width: 1439px) and (min-width:1024px){
+    .header{
+        margin: 0;
+        background-color: #ff774a;
+        background-image: url("images/anoter\ bg.png");
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        & .headerSubCont{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            & .logoImg{
+                width: 180px;
+            }
+        }
+        & .menuCont{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-sizing: border-box;
+            width: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & a{
+                text-decoration: none;
+                color: #842E01;
+                font-size: 1.5em;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .orderNow{
+        height: 100%;
+        width: 23%;
+        min-width: 300px;
+        font-size: 1.7em;
+        font-weight: 600;
+        border: 0px;
+        border-radius: 100px;
+        background-color: rgba(250,250,250,0.4);
+    }
+
+    .searchBar::placeholder{
+        color:rgba(230, 230, 230, 0.8)
+    }
+}
+
+@media (max-width: 1023px) and (min-width:768px){
+    body{
+        background-position: 0 80px;
+    }
+    .header{
+        
+        margin: 0;
+        background-color: #ff774a;
+        background-image: url("images/anoter\ bg.png");
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        & .headerSubCont{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            & .logoImg{
+                width: 120px;
+            }
+        }
+        & .menuCont{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-sizing: border-box;
+            width: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & a{
+                text-decoration: none;
+                color: #842E01;
+                font-size: 1.4em;
+                font-weight: 600;
+            }
+        }
+    }
+    & .icon{
+        height: 70%;
+    }
+
+    .orderNow{
+        height: 100%;
+        width: 23%;
+        min-width: 300px;
+        font-size: 1.7em;
+        font-weight: 600;
+        border: 0px;
+        border-radius: 100px;
+        background-color: rgba(250,250,250,0.4);
+    }
+
+    .searchBar::placeholder{
+        color:rgba(230, 230, 230, 0.8)
+    }
+}
+
+
+@media (max-width: 767px){
+    body{
+        background-position: 0 80px;
+    }
+    .menuSlide{
+        transition: 0.2s ease;
+        position: absolute;
+        left: -100%;
+        top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 50%;
+        background: rgba(250,250,250, 0.5);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        z-index: 100;
+        & a{
+            /* color: #ff774a; */
+            color: black;
+            font-size: 1.3em;
+            text-decoration: none;
+        }
+        
+        & .menuCont2{
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+        }
+        & .userDeets{
+            position: absolute;
+            top: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            *{
+                margin: 0;
+            }
+            & h1{
                 font-size: 1.3em;
-                font-weight: 600;
-                
+            }
+            & h2{
+                font-size: 0.9em;
+                font-weight: 400;
             }
         }
-        & .icon{
-            height: 70%;
-            opacity: 80%;
-        }
     }
-
-    .orderNow{
+    
+    .header{
+        margin: 0;
+        background-color: #ff774a;
+        background-image: url("images/anoter\ bg.png");
         height: 100%;
-        width: 23%;
-        min-width: 300px;
-        font-size: 1.7em;
-        font-weight: 600;
-        border: 0px;
-        border-radius: 100px;
-        background-color: rgba(250,250,250,0.4);
-    }
-
-    .searchBar::placeholder{
-        color:rgba(230, 230, 230, 0.8)
-    }
-}
-
-@media (max-width: 1280px) and (min-width:1000px){
-    .headerSubCont{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        width: 100%;
         align-items: center;
-        width: 95%;
-        height: 100%;
-        & .logoImg{
-            height: 50%;
-            margin: 0;
-        }
-        & .searchCont{
-            margin: 0;
-            padding: 0;
-            position: relative;
-            height: 100%;
-            width: 40%;
-            & img{
-                width: 3%;
-                position: absolute;
-                right: calc(0% + 5px);
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
-        & .searchBar{
-            box-sizing: border-box;
-            position: relative;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            width: 100%;
-            height: 40%;
-            border: 1.5px rgba(230, 230, 230, 0.8) solid;
-            border-radius: 10px;
-            margin: 0;
-            background-color: rgba(250,250,250,0.4);
-            padding-left: 20px;
-            padding-right: 20px;
-            font-size: 90%;
-            
-        }
-        & .menuCont{
+        padding-left: 25px;
+        padding-right: 25px;
+        & .headerSubCont{
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
             align-items: center;
-            width: 30%;
-            margin: 0;
-            & a{
-                text-decoration: none;
-                color: white;
-                font-size: 1em;
-                font-weight: 600;
-                
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            & .logoImg{
+                width: 120px;
             }
         }
-        & .icon{
-            height: 70%;
-            opacity: 80%;
+        & .menuCont{
+            display: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-sizing: border-box;
+            width: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & a{
+                display: none;
+                text-decoration: none;
+                color: #842E01;
+                font-size: 1.25em;
+                font-weight: 600;
+            }
         }
     }
-
-    .orderNow{
-        height: 100%;
-        width: 23%;
-        min-width: 300px;
-        font-size: 1.7em;
-        font-weight: 600;
-        border: 0px;
-        border-radius: 100px;
-        background-color: rgba(250,250,250,0.4);
+    & .icon{
+        display: none;
     }
-
-    .searchBar::placeholder{
-        color:rgba(230, 230, 230, 0.8)
-    }
-}
-
-@media (max-width: 999px) and (min-width:700px){
-    .headerSubCont{
+    
+    .borgir{
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-        height: 100%;
-        & .logoImg{
-            height: 50%;
-            margin: 0;
-        }
-        & .searchCont{
-            margin: 0;
-            padding: 0;
-            position: relative;
-            height: 100%;
-            width: 40%;
-            & img{
-                width: 7%;
-                position: absolute;
-                right: calc(0% + 5px);
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
-        & .searchBar{
-            box-sizing: border-box;
-            position: relative;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            width: 100%;
-            height: 40%;
-            border: 1.5px rgba(230, 230, 230, 0.8) solid;
-            border-radius: 10px;
-            margin: 0;
-            background-color: rgba(250,250,250,0.4);
-            padding-left: 20px;
-            padding-right: 20px;
-            font-size: 90%;
-            
-        }
-        & .menuCont{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: 30%;
-            margin: 0;
-            & a{
-                text-decoration: none;
-                color: white;
-                font-size: 0.8em;
-                font-weight: 600;
-                
-            }
-        }
-        & .icon{
-            height: 70%;
-            opacity: 80%;
-        }
-    }
-
-    .orderNow{
-        height: 100%;
-        width: 23%;
-        min-width: 300px;
-        font-size: 1.7em;
-        font-weight: 600;
-        border: 0px;
-        border-radius: 100px;
-        background-color: rgba(250,250,250,0.4);
-    }
-
-    .searchBar::placeholder{
-        color:rgba(230, 230, 230, 0.8)
-    }
-}
-
-@media (max-width: 699px) and (min-width:550px){
-    .headerSubCont{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-        height: 100%;
-        & .logoImg{
-            height: 45%;
-            margin: 0;
-        }
-        & .searchCont{
-            margin: 0;
-            padding: 0;
-            position: relative;
-            height: 100%;
-            width: 35%;
-            & img{
-                width: 8%;
-                position: absolute;
-                right: calc(0% + 5px);
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
-        & .searchBar{
-            box-sizing: border-box;
-            position: relative;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            width: 100%;
-            height: 40%;
-            border: 1.5px rgba(230, 230, 230, 0.8) solid;
-            border-radius: 10px;
-            margin: 0;
-            background-color: rgba(250,250,250,0.4);
-            padding-left: 20px;
-            padding-right: 20px;
-            font-size: 90%;
-            
-        }
-        & .menuCont{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: 30%;
-            margin: 0;
-            & a{
-                text-decoration: none;
-                color: white;
-                font-size: 0.7em;
-                font-weight: 600;
-                
-            }
-        }
-        & .icon{
-            height: 60%;
-            opacity: 80%;
-        }
-    }
-
-    .orderNow{
-        height: 100%;
-        width: 23%;
-        min-width: 300px;
-        font-size: 1.7em;
-        font-weight: 600;
-        border: 0px;
-        border-radius: 100px;
-        background-color: rgba(250,250,250,0.4);
-    }
-
-    .searchBar::placeholder{
-        color:rgba(230, 230, 230, 0.8)
-    }
-}
-
-@media (max-width: 549px){
-    body,html{
-        background-size: cover;
-    }
-    .headerSubCont{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-        height: 100%;
-        & .logoImg{
-            height: 40%;
-            margin: 0;
-        }
-        & .searchCont{
-            margin: 0;
-            padding: 0;
-            position: relative;
-            height: 100%;
-            width: 30%;
-            & img{
-                width: 8%;
-                position: absolute;
-                right: calc(0% + 5px);
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
-        & .searchBar{
-            box-sizing: border-box;
-            position: relative;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            width: 100%;
-            height: 40%;
-            border: 1.5px rgba(230, 230, 230, 0.8) solid;
-            border-radius: 10px;
-            margin: 0;
-            background-color: rgba(250,250,250,0.4);
-            padding-left: 20px;
-            padding-right: 20px;
-            font-size: 90%;
-            
-        }
-        & .menuCont{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            width: 30%;
-            margin: 0;
-            & a{
-                text-decoration: none;
-                color: white;
-                font-size: 0.6em;
-                font-weight: 600;
-                
-            }
-        }
-        & .icon{
-            height: 60%;
-            opacity: 80%;
-        }
+        height: 35%;
     }
 
     .orderNow{
