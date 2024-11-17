@@ -8,10 +8,23 @@
     <link rel="stylesheet" href="blog page 2.css" media="(max-width:767px)">
 </head>
 <body>
+    <div class="menuSlide" id="menuSlide">
+        <div class="userDeets">
+            <img src="images/user icon.png" class="userrr" alt="">
+            <h1>Username</h1>
+            <h2>username@domain.ok</h2>
+        </div>
+        <div class="menuCont2">
+            <a href="about page.html">About</a>
+            <a href="blog page.html">Blog</a>
+            <a href="">Product</a>
+            <a href="">Contact</a>
+        </div>
+    </div>
     <header>
         <div class="header">
             <div class="headerSubCont">
-                <img src="images/pure white logo.png" alt="" class="logoImg">
+                <img src="images/pure white logo.png" alt="" class="logoImg" id="logoImg">
     
                 <div class="searchCont" style="display: none;">
                     <input type="text" class="searchBar" placeholder="Search...">
@@ -26,13 +39,14 @@
                 </div>
     
                 <img src="images/user icon.png" alt="" class="icon">
-                <img src="images/menu.png" alt="" class=" borgir">
+                <img src="images/menu.png" alt="" class=" borgir" id="borgir">
 
             </div>
         </div>
     </header>
     
     <main>
+        
         <div class="main">
             <div class="menuCont" id="menuCont">
                 <img src="images/drinks menu.jpg" alt="">
@@ -165,10 +179,36 @@
     
 
     <script>
+        document.getElementById("logoImg").addEventListener("click", ()=>{
+            window.location.href = "index.html";
+        });
+
+        let borgirmenu = document.getElementById("borgir");
+        let menuSlide = document.getElementById("menuSlide");
+        let menuToggle = false;
+
+        document.querySelectorAll("main").forEach(everythingg=>{
+            everythingg.addEventListener("click", ()=>{
+                menuSlide.style.left = "-100%";
+                menuToggle = false;
+            })
+        })
+
+        borgirmenu.addEventListener("click", ()=>{
+            if(!menuToggle){
+                menuSlide.style.left = "0";
+                menuToggle = true;
+            }
+            else if(menuToggle){
+                menuSlide.style.left = "-100%";
+                menuToggle = false;
+            }
+        })
+
         let menuCont = document.getElementById("menuCont");
         let use = false;
 
-        const mediaQuery = window.matchMedia("(max-width: 1024px)");
+        const mediaQuery = window.matchMedia("(max-width: 1023px)");
 
         function handleMediaChange(event) {
             if (event.matches) {
@@ -228,8 +268,9 @@
         let currentToggledBlog = null;
 
         ratedBlogs.forEach(rb => {
-            let rbImg = rb.querySelector(".mainImg")
+            let rbImg = rb.querySelector(".mainImg");
             let rbCapt = rb.querySelector(".capt");
+            let rbRating = rb.querySelector(".stars");
             rbImg.addEventListener("click", () => {
                 
                 if (currentToggledBlog === rb) {
@@ -238,6 +279,8 @@
                     rb.querySelector(".mainImg").style.left = "";
                     rb.querySelector(".blogDesc").style.height = "";
                     rb.querySelector(".blogDesc").style.width = "";
+                    rbRating.style.left = ""
+                    rbRating.style.top = ""
                     rbCapt.style.display = "none";
                     currentToggledBlog = null;
                 } else {
@@ -247,6 +290,8 @@
                         currentToggledBlog.querySelector(".mainImg").style.left = "";
                         currentToggledBlog.querySelector(".blogDesc").style.height = "";
                         currentToggledBlog.querySelector(".blogDesc").style.width = "";
+                        currentToggledBlog.querySelector(".stars").style.left = "";
+                        currentToggledBlog.querySelector(".stars").style.top = "";
                         console.log("2")
                         currentToggledBlog.querySelector(".capt").style.display = "none";
                     }
@@ -257,7 +302,24 @@
                         rb.querySelector(".mainImg").style.left = "25%";
                         rb.querySelector(".blogDesc").style.height = "100%";
                         rb.querySelector(".blogDesc").style.width = "50%";
+                        rbRating.style.left = "5px"
+                        rbRating.style.top = "17%"
                         rbCapt.style.display = "flex";
+                        rbCapt.style.position = "absolute";
+                        rbCapt.style.top = "25%"
+                        currentToggledBlog = rb;
+                    }
+                    else if(!use){
+                        // rb.style.transform = "scaleX(1.05)";
+                        rb.style.zIndex = 50;
+                        // rb.querySelector(".mainImg").style.width = "50%";
+                        // rb.querySelector(".mainImg").style.left = "25%";
+                        // rb.querySelector(".blogDesc").style.height = "100%";
+                        // rb.querySelector(".blogDesc").style.width = "50%";
+                        // rbRating.style.left = "5px"
+                        // rbRating.style.top = "50px"
+                        rbCapt.style.display = "flex";
+                        rbCapt.style.height = "50px"
                         currentToggledBlog = rb;
                     }
                 }

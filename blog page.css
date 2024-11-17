@@ -7,6 +7,10 @@
 }
 
 *{
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none; 
+    -ms-user-select: none;
     box-sizing: border-box;
 }
 
@@ -19,6 +23,10 @@ body, html{
     font-family: "Inter";
     display: flex;
     flex-direction: column;
+}
+
+.menuSlide{
+    display: none;
 }
 
 .borgir{
@@ -57,12 +65,16 @@ main::-webkit-scrollbar{
 }
 
 .captCont{
-    max-height: 300px;
+    max-height: 200px;
     overflow: scroll;
     margin-top: 20px;
     & .capt{
         display: none;
     }
+}
+
+.captCont::-webkit-scrollbar{
+    display: none;
 }
 
 .blog{
@@ -79,13 +91,13 @@ main::-webkit-scrollbar{
         z-index: 0;
     }
     & .blogDesc{
+        overflow: hidden;
         z-index: 5;
         width: 100%;
         background-color: white;
         position: absolute;
         bottom: 0;
         right: 0;
-        transition: 0.3s;
         & h1{
             font-size: 1em;
         }
@@ -94,6 +106,9 @@ main::-webkit-scrollbar{
         }
         & h1, p{
             margin: 5px;
+        }
+        & .starling{
+            cursor: pointer;
         }
     }
 }
