@@ -29,6 +29,10 @@ body, html{
     display: none;
 }
 
+.menuSlide{
+    display: none;
+}
+
 body::-webkit-scrollbar{
     display: none;
 }
@@ -129,9 +133,8 @@ header, .headerWrapper{
 
 @media (max-width: 1439px) and (min-width:1024px){
     .header{
-        margin: 0;
-        background-color: #ff774a;
-        background-image: url("images/anoter\ bg.png");
+        margin: 0;        
+        background-color:rgba(50,50,50,0.6);
         height: 100%;
         display: flex;
         flex-direction: row;
@@ -184,8 +187,7 @@ header, .headerWrapper{
     .header{
         
         margin: 0;
-        background-color: #ff774a;
-        background-image: url("images/anoter\ bg.png");
+        background-color:rgba(50,50,50,0.6);
         height: 100px;
         display: flex;
         flex-direction: row;
@@ -294,8 +296,7 @@ header, .headerWrapper{
     
     .header{
         margin: 0;
-        background-color: #ff774a;
-        background-image: url("images/anoter\ bg.png");
+        background-color:rgba(50,50,50,0.6);
         height: 100%;
         display: flex;
         flex-direction: row;
