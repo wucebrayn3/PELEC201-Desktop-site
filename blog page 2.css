@@ -1,0 +1,126 @@
+.header{
+    margin: 0;
+    background-color: #ff774a;
+    background-image: url("images/anoter\ bg.png");
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    padding-left: 25px;
+    padding-right: 25px;
+    & .headerSubCont{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+        & .logoImg{
+            width: 120px;
+        }
+    }
+    & .menuCont{
+        display: none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        box-sizing: border-box;
+        width: 380px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & a{
+            display: none;
+            text-decoration: none;
+            color: #842E01;
+            font-size: 1.25em;
+            font-weight: 600;
+        }
+    }
+}
+& .icon{
+    display: none;
+}
+
+.borgir{
+    display: flex;
+    height: 35%;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    & .menuCont{
+        width: 250px;
+        & img{
+            width: 100%;
+            border-radius: 15px;
+        }
+    }
+    & .blogCont{
+        width: calc(100% - 350px);
+        padding-left: 25px;
+        padding-right: 25px;
+        & .blogWrapper{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+            & .blog{
+                margin: 20px;
+                width: 250px;
+                height: 330px;
+                border: 1px black solid;
+                border-radius: 10px;
+                & .mainImg{
+                    position: absolute;
+                    width: 250px;
+                    transition: 0.2s;
+                }
+                & h1{
+                    font-size: 1em;
+                }
+                
+                & .blogDesc{
+                    height: 50px;
+                    & p{
+                        font-size: 0.8em;
+                    }
+                }
+            }
+    }
+}
+.stars{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    width: 90px;
+    justify-content: space-between;
+}
+
+.starling{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin: 0;    
+    padding: 0;
+    & img{
+        padding: 1px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 15px;
+        height: 15px;
+        margin: 0;
+    }    
+}
