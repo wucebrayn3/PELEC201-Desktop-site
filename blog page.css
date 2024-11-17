@@ -25,6 +25,8 @@ body, html{
     flex-direction: column;
 }
 
+
+
 .menuSlide{
     display: none;
 }
@@ -65,9 +67,9 @@ main::-webkit-scrollbar{
 }
 
 .captCont{
-    max-height: 200px;
+    max-height: 150px;
     overflow: scroll;
-    margin-top: 20px;
+    margin-top: 10px;
     & .capt{
         display: none;
     }
@@ -91,7 +93,7 @@ main::-webkit-scrollbar{
         z-index: 0;
     }
     & .blogDesc{
-        overflow: hidden;
+        overflow: scroll;
         z-index: 5;
         width: 100%;
         background-color: white;
@@ -103,6 +105,7 @@ main::-webkit-scrollbar{
         }
         & p{
             font-size: 1.1em;
+            margin-bottom: 5px;
         }
         & h1, p{
             margin: 5px;
