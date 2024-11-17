@@ -63,9 +63,15 @@ header, .headerWrapper{
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 10%;
     & .orderNow{
+        font-family: "Inter";
+        font-weight: 600;
         transition: 0.3s;
+        height: 100%;
+        border: 1px rgba(250,250,250, 0.5) solid;
+        border-radius: 50px;
+        height: 100%;
+        background-color: rgba(250,250,250,0.4);
     }
     & .orderNow:hover{
         transform: scale(1.05);
@@ -112,16 +118,12 @@ header, .headerWrapper{
             }
         }
     }
-
-    .orderNow{
-        height: 100%;
-        width: 23%;
-        min-width: 300px;
-        font-size: 1.7em;
-        font-weight: 600;
-        border: 0px;
-        border-radius: 100px;
-        background-color: rgba(250,250,250,0.4);
+    .btnWrapper{
+        height: 60px;
+        & .orderNow{
+            width: 250px;
+            font-size: 1.5em;
+        }
     }
 }
 
@@ -165,21 +167,14 @@ header, .headerWrapper{
             }
         }
     }
-
-    .orderNow{
-        height: 100%;
-        width: 23%;
-        min-width: 300px;
-        font-size: 1.7em;
-        font-weight: 600;
-        border: 0px;
-        border-radius: 100px;
-        background-color: rgba(250,250,250,0.4);
+    .btnWrapper{
+        height: 60px;
+        & .orderNow{
+            width: 250px;
+            font-size: 1.5em;
+        }
     }
 
-    .searchBar::placeholder{
-        color:rgba(230, 230, 230, 0.8)
-    }
 }
 
 @media (max-width: 1023px) and (min-width:768px){
@@ -230,19 +225,12 @@ header, .headerWrapper{
         height: 70%;
     }
 
-    .orderNow{
-        height: 100%;
-        width: 23%;
-        min-width: 300px;
-        font-size: 1.7em;
-        font-weight: 600;
-        border: 0px;
-        border-radius: 100px;
-        background-color: rgba(250,250,250,0.4);
-    }
-
-    .searchBar::placeholder{
-        color:rgba(230, 230, 230, 0.8)
+    .btnWrapper{
+        height: 60px;
+        & .orderNow{
+            width: 250px;
+            font-size: 1.4em;
+        }
     }
 }
 
@@ -250,6 +238,8 @@ header, .headerWrapper{
 @media (max-width: 767px){
     body{
         background-position: 0 80px;
+        /* background-repeat: repeat-y; */
+        background-size: 100% 100%;
     }
     .menuSlide{
         transition: 0.2s ease;
@@ -352,19 +342,12 @@ header, .headerWrapper{
         height: 35%;
     }
 
-    .orderNow{
-        height: 100%;
-        width: 23%;
-        min-width: 300px;
-        font-size: 1.7em;
-        font-weight: 600;
-        border: 0px;
-        border-radius: 100px;
-        background-color: rgba(250,250,250,0.4);
-    }
-
-    .searchBar::placeholder{
-        color:rgba(230, 230, 230, 0.8)
+    .btnWrapper{
+        height: 60px;
+        & .orderNow{
+            width: 250px;
+            font-size: 1.4em;
+        }
     }
 }
 
