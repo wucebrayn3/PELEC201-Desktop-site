@@ -1,0 +1,608 @@
+@font-face {
+    font-family: "Inter", "sans-serif";
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    src: url("https://fonts.googleapis.com");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body, html{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #FFB733;
+    font-family: "Inter";
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.menuSlide{
+    display: none;
+}
+
+.borgir{
+    display: none;
+}
+
+header{
+    position: fixed;
+}
+
+.headerWrapper{
+    background-color: black;
+    height: 80px;
+    width: 100%;
+}
+
+header{
+    height: 80px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100; /* CANNOT BE TRUSTED EASILY */
+}
+
+main{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    margin: 0;
+    padding: 0;    
+    overflow-x: hidden;
+}
+
+main::-webkit-scrollbar{
+    display: none;
+}
+
+.menuLabelCont{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #842E01;
+    background-color: #FF7401;
+    border: 1px #DC4D01 solid;
+    box-shadow: 0 5px 5px rgba(10,10,10,0.2);
+}
+
+.btnCont{
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    & .prodBtn{
+        font-weight: 600;
+        padding: 5px;
+        background-color: #FFB733;
+        border: 1px #DC4D01 solid;
+        color: #842E01;
+        transition: 0.3s;
+    }
+}
+.prodBtn:hover{
+    transform: scale(1.05);
+    background-color: white;
+    color: black;
+    border: 1px black solid;
+    filter: drop-shadow(0 5px 5px rgba(10,10,10,0.5));
+}
+
+.prodCont{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    & .prodPlaceholder{
+        width: 100%;
+        padding: 100px;
+        text-align: center;
+    }
+    & .prodSubCont{
+        /* display: none; */
+        transition: 0.2s;
+        padding: 10px;
+        height: auto;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & img{
+            width: 80%;
+            aspect-ratio: 1/1;
+            margin: 0;
+        }
+        & h3{
+            margin: 0;
+            text-align: center;
+        }
+        & h4{
+            margin: 0;
+        }
+    }
+}
+
+.bigOne{
+    width: 50%;
+    margin: 0;
+    padding-bottom: 30px;
+    transition: 0.2s;
+    & img{
+        vertical-align: top;
+        width: 100%;
+        aspect-ratio: 1/1.2;
+        margin: 0;
+    }
+}
+
+
+
+.manymanymore{
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+    * img{
+        transition: 0.2s;
+
+    }
+}
+
+
+
+.prodSubCont:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px rgba(10,10,10,0.5));
+}
+
+.horizontal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+}
+
+#horizontal1{
+    justify-content: center;
+}
+
+#horizontal2,#horizontal3,#horizontal4{
+    justify-content: space-between;
+}
+
+#horizontal1 img{
+    width: 80%;
+}
+
+#horizontal2 img{
+    width: 30%;
+}
+
+#horizontal3 img{
+    width: 30%;
+}
+
+#horizontal4 img{
+    width: 45%;
+}
+
+@media (min-width:1439px){
+
+    .prodSubCont{
+        width: 30%;
+    }
+    .prodBtn{
+        width: 23%;
+        font-size: 1.05em;
+    }
+    .header{
+        margin: 0;
+        background-color: #ff774a;
+        background-image: url("images/anoter\ bg.png");
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        & .headerSubCont{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            & .logoImg{
+                width: 200px;
+            }
+        }
+        & .menuCont{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-sizing: border-box;
+            width: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & a{
+                text-decoration: none;
+                color: #842E01;
+                font-size: 1.7em;
+                font-weight: 600;
+            }
+        }
+    }
+    
+}
+
+
+
+@media (max-width:1439px){
+    .prodSubCont{
+        width: 30%;
+    }
+    .prodBtn{
+        width: 23%;
+        font-size: 1.03em;
+    }
+    .header{
+        margin: 0;
+        background-color: #ff774a;
+        background-image: url("images/anoter\ bg.png");
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        & .headerSubCont{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            & .logoImg{
+                width: 180px;
+            }
+        }
+        & .menuCont{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-sizing: border-box;
+            width: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & a{
+                text-decoration: none;
+                color: #842E01;
+                font-size: 1.5em;
+                font-weight: 600;
+            }
+        }
+    }
+    
+}
+
+
+
+@media (max-width:1023px){
+    .prodSubCont{
+        width: 40%;
+    }
+    .prodBtn{
+        width: 23%;
+        height: 40px;
+        font-size: 0.8em;
+    }
+    .header{
+        
+        margin: 0;
+        background-color: #ff774a;
+        background-image: url("images/anoter\ bg.png");
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        & .headerSubCont{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            & .logoImg{
+                width: 120px;
+            }
+        }
+        & .menuCont{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-sizing: border-box;
+            width: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & a{
+                text-decoration: none;
+                color: #842E01;
+                font-size: 1.4em;
+                font-weight: 600;
+            }
+        }
+    }
+    & .icon{
+        height: 70%;
+    }
+
+}
+
+@media (max-width:768px){
+    .bigOne{
+        width: 80%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .manymanymore{
+        width: 100%;
+        & #horizontal1 img,#horizontal2 img,#horizontal3 img,#horizontal4 img{
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    .prodSubCont{
+        width: 60%;
+    }
+    .prodBtn{
+        width: 23%;
+        height: 40px;
+        font-size: 0.8em;
+    }
+    .menuSlide{
+        transition: 0.2s ease;
+        position: absolute;
+        left: -100%;
+        top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 50%;
+        background: rgba(250,250,250, 0.5);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        z-index: 100;
+        & a{
+            /* color: #ff774a; */
+            color: black;
+            font-size: 1.3em;
+            text-decoration: none;
+        }
+        
+        & .menuCont2{
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+        }
+        & .userDeets{
+            position: absolute;
+            top: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            *{
+                margin: 0;
+            }
+            & h1{
+                font-size: 1.3em;
+            }
+            & h2{
+                font-size: 0.9em;
+                font-weight: 400;
+            }
+        }
+    }
+    .header{
+        margin: 0;
+        background-color: #ff774a;
+        background-image: url("images/anoter\ bg.png");
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        & .headerSubCont{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            & .logoImg{
+                width: 120px;
+            }
+        }
+        & .menuCont{
+            display: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-sizing: border-box;
+            width: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & a{
+                display: none;
+                text-decoration: none;
+                color: #842E01;
+                font-size: 1.25em;
+                font-weight: 600;
+            }
+        }
+    }
+    & .icon{
+        display: none;
+    }
+    
+    .borgir{
+        display: flex;
+        height: 35%;
+    }
+}
+
+@media (max-width:425px){
+    .prodSubCont{
+        width: 60%;
+    }
+    .prodBtn{
+        width: 23%;
+        height: 45px;
+        font-size: 0.6em;
+    }
+    .menuSlide{
+        transition: 0.2s ease;
+        position: absolute;
+        left: -100%;
+        top: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 50%;
+        background: rgba(250,250,250, 0.5);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        z-index: 100;
+        & a{
+            /* color: #ff774a; */
+            color: black;
+            font-size: 1.3em;
+            text-decoration: none;
+        }
+        
+        & .menuCont2{
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+        }
+        & .userDeets{
+            position: absolute;
+            top: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            *{
+                margin: 0;
+            }
+            & h1{
+                font-size: 1.3em;
+            }
+            & h2{
+                font-size: 0.9em;
+                font-weight: 400;
+            }
+        }
+    }
+    
+    .header{
+        margin: 0;
+        background-color: #ff774a;
+        background-image: url("images/anoter\ bg.png");
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        padding-left: 25px;
+        padding-right: 25px;
+        & .headerSubCont{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
+            & .logoImg{
+                width: 120px;
+            }
+        }
+        & .menuCont{
+            display: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            box-sizing: border-box;
+            width: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            & a{
+                display: none;
+                text-decoration: none;
+                color: #842E01;
+                font-size: 1.25em;
+                font-weight: 600;
+            }
+        }
+    }
+    & .icon{
+        display: none;
+    }
+    
+    .borgir{
+        display: flex;
+        height: 35%;
+    }
+}
+
