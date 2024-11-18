@@ -25,15 +25,10 @@
             <div class="headerSubCont">
                 <img src="images/pure white logo.png" alt="" class="logoImg" id="logoImg">
     
-                <div class="searchCont" style="display: none;">
-                    <input type="text" class="searchBar" placeholder="Search...">
-                    <img src="images/search icon.png" alt="">
-                </div>
-    
                 <div class="menuCont">
                     <a href="about page.html">About</a>
                     <a href="blog page.html">Blog</a>
-                    <a href="">Product</a>
+                    <a href="products page.html">Product</a>
                     <a href="">Contact</a>
                 </div>
     
@@ -81,31 +76,33 @@
         </div>
     </div>
 
-    <script>document.getElementById("logoImg").addEventListener("click", ()=>{
-        window.location.href = "index.html";
-    });
+    <script>
+        document.getElementById("logoImg").addEventListener("click", ()=>{
+            window.location.href = "index.html";
+        });
 
-    let borgirmenu = document.getElementById("borgir");
-    let menuSlide = document.getElementById("menuSlide");
-    let menuToggle = false;
+        let borgirmenu = document.getElementById("borgir");
+        let menuSlide = document.getElementById("menuSlide");
+        let menuToggle = false;
 
-    document.querySelectorAll("main").forEach(everythingg=>{
-        everythingg.addEventListener("click", ()=>{
-            menuSlide.style.left = "-100%";
-            menuToggle = false;
+        document.querySelectorAll("main").forEach(everythingg=>{
+            everythingg.addEventListener("click", ()=>{
+                menuSlide.style.left = "-100%";
+                menuToggle = false;
+            })
         })
-    })
 
-    borgirmenu.addEventListener("click", ()=>{
-        if(!menuToggle){
-            menuSlide.style.left = "0";
-            menuToggle = true;
-        }
-        else if(menuToggle){
-            menuSlide.style.left = "-100%";
-            menuToggle = false;
-        }
-    })</script>
+        borgirmenu.addEventListener("click", ()=>{
+            if(!menuToggle){
+                menuSlide.style.left = "0";
+                menuToggle = true;
+            }
+            else if(menuToggle){
+                menuSlide.style.left = "-100%";
+                menuToggle = false;
+            }
+        })
+    </script>
 
 </body>
 </html>

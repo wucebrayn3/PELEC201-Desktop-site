@@ -29,6 +29,11 @@ body, html{
 
 .menuSlide{
     display: none;
+    overflow: hidden;
+}
+
+body::-webkit-scrollbar{
+    display: none;
 }
 
 .borgir{
@@ -120,7 +125,7 @@ main::-webkit-scrollbar{
     display: none;
 }
 
-@media (min-width:1440px){
+@media (min-width:1439px){
     main{
             height: calc(100vh - 80px);
 
@@ -236,7 +241,7 @@ main::-webkit-scrollbar{
 
 
 
-@media (min-width:1024px) and (max-width:1439px){
+@media (max-width:1439px){
     main{
         height: calc(100vh - 80px);
     }
@@ -349,7 +354,7 @@ main::-webkit-scrollbar{
 
 
 
-@media (min-width:768px) and (max-width:1023px){
+@media (max-width:1023px){
     main{
         margin-top: 120px;
         height: 100vh;
@@ -413,8 +418,10 @@ main::-webkit-scrollbar{
         }
         & .blogCont{
             width: calc(100% - 350px);
-            padding-left: 25px;
-            padding-right: 25px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             & .blogWrapper{
                 margin: 0;
                 padding: 0;
