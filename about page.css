@@ -33,7 +33,6 @@ body::-webkit-scrollbar{
 header, .headerWrapper{
     position: fixed;
     height: 80px;
-    width: 100%;
     margin: 0;
     padding: 0;
     position: fixed;
@@ -41,6 +40,10 @@ header, .headerWrapper{
     left: 0;
     right: 0;
     z-index: 100; /* CANNOT BE TRUSTED EASILY */
+}
+
+.header{
+    width: 100vw;
 }
 
 .borgir{

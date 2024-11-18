@@ -12,8 +12,6 @@
 
 body, html{
     height: 100vh;
-    width: 100vw;
-    min-width: 400px;   
     margin: 0;
     padding: 0;
     background-image: url("images/front\ page\ bg.jpg");
@@ -164,7 +162,7 @@ header, .headerWrapper{
             justify-content: space-between;
             & a{
                 text-decoration: none;
-                color: #842E01;
+                color: white;
                 font-size: 1.5em;
                 font-weight: 600;
             }
@@ -217,7 +215,7 @@ header, .headerWrapper{
             justify-content: space-between;
             & a{
                 text-decoration: none;
-                color: #842E01;
+                color: white;
                 font-size: 1.4em;
                 font-weight: 600;
             }
@@ -328,7 +326,7 @@ header, .headerWrapper{
             & a{
                 display: none;
                 text-decoration: none;
-                color: #842E01;
+                color: white;
                 font-size: 1.25em;
                 font-weight: 600;
             }
