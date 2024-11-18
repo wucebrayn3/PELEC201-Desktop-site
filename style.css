@@ -129,7 +129,7 @@ header, .headerWrapper{
     }
 }
 
-@media (max-width: 1439px) and (min-width:1024px){
+@media (max-width: 1439px){
     .header{
         margin: 0;        
         background-color:rgba(50,50,50,0.6);
@@ -178,7 +178,7 @@ header, .headerWrapper{
 
 }
 
-@media (max-width: 1023px) and (min-width:768px){
+@media (max-width: 1023px){
     body{
         background-position: 0 80px;
     }
