@@ -1,0 +1,558 @@
+@font-face {
+    font-family: "Inter", "sans-serif";
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    src: url("https://fonts.googleapis.com");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 100vh;
+    min-height: 500px;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+    display: flex;
+    position: relative;
+    /* flex-direction: row;
+    flex-wrap: nowrap; */
+}
+
+.menuSlide{
+    /* position: fixed; */
+    display: none;
+}
+
+.menuIcon{
+    display: flex;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+@media (min-width:1439px){
+    .menuIcon{
+        display: none;
+    }
+    body{
+        flex-direction: row;
+    }
+    .left, .right{
+        overflow: hidden;
+        width: 50%;
+        height: 100%;
+    }
+    .left img{
+        width: 100%;
+        height: auto;
+    }
+    .right{
+        padding: 0;
+        & .rTop{
+            position: relative;
+            height: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 119, 74,0.6);
+            background-image: url("images/anoter bg.png");
+            background-size: 250% 100%;
+            & .header{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 80px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 25px;
+                padding-left: 25px;
+                padding-right: 25px;
+                & * {
+                    margin: 0;
+                }
+                & a{
+                    text-decoration: none;
+                    font-size: 1.25em;
+                    font-weight: 600;
+                    color: #842E01;
+                }
+            }
+            & .logoCont{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 400px;
+                & img{
+                    width: 100%;
+                }
+            }
+        }
+        & .rBottom{
+            height: 65%;
+            background-color: #FCE1AF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & .contact{
+                height: 450px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                & .wrapper{
+                    height: 100%;
+                    & .contactLabel{
+                        color:  #FF7600;
+                        text-align: center;
+                        font-size: 2.4em;
+                        font-weight: 600;
+                        padding: 20px;
+                    }
+                    & .horizontal{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: start;
+                        height: 80px;
+                        & img{
+                            height: 50px;
+                            margin: 10px;
+                        }
+                        & h3, h5{
+                            margin: 0;
+                        }
+                        & h3{
+                            font-size: 2em;
+                            font-weight: 500;
+                        }
+                        & h5{
+                            font-size: 0.8em;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:1439px){
+    .menuIcon{
+        display: none;
+    }
+    body{
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .left, .right{
+        overflow: hidden;
+        width: 50%;
+        height: 100%;
+    }
+    .left img{
+        width: 100%;
+        height: 100%;
+    }
+    .right{
+        padding: 0;
+        & .rTop{
+            position: relative;
+            height: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 119, 74,0.6);
+            background-image: url("images/anoter bg.png");
+            background-size: 250% 100%;
+            & .header{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 70px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding-left: 25px;
+                padding-right: 25px;
+                & * {
+                    margin: 0;
+                }
+                & a{
+                    text-decoration: none;
+                    font-size: 1.1em;
+                    font-weight: 600;
+                    color: #842E01;
+                }
+                & img{
+                    height: 50px;
+                }
+            }
+            & .logoCont{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 250px;
+                & img{
+                    width: 100%;
+                }
+            }
+        }
+        & .rBottom{
+            height: 65%;
+            background-color: #FCE1AF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & .contact{
+                /* background-color: aqua; */
+                height: 230px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                & .wrapper{
+                    height: 100%;
+                    & .contactLabel{
+                        color:  #FF7600;
+                        text-align: center;
+                        font-size: 1.5em;
+                        font-weight: 600;
+                        padding: 10px;
+                    }
+                    & .horizontal{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: start;
+                        height: 45px;
+                        & img{
+                            height: 33px;
+                            margin: 8px;
+                        }
+                        & h3, h5{
+                            margin: 0;
+                            padding: 0;
+                        }
+                        & h3{
+                            font-size: 1.4em;
+                            font-weight: 500;
+                        }
+                        & h5{
+                            font-size: 0.5em;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:1024px) and (min-width:768px){ /* FIX THIS LATERRRR (TABLET) */
+    .menuIcon{
+        display: none;
+    }
+    body{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .left, .right{
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+    }
+    .left img{
+        display: none;
+    }
+    .left{
+        position: absolute;
+        background-image: url("images/image\ \(15\).png");
+
+    }
+    .right{
+        position: absolute;
+        padding: 0;
+        & .rTop{
+            /* position: relative; */
+            height: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 119, 74,0.6);
+            background-image: url("images/anoter bg.png");
+            background-size: 250% 100%;
+            & .header{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 80px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 5px;
+                padding-left: 25px;
+                padding-right: 25px;
+                & * {
+                    margin: 0;
+                }
+                & a{
+                    text-decoration: none;
+                    font-size: 1.1em;
+                    font-weight: 600;
+                    color: #842E01;
+                }
+                & img{
+                    height: 50px;
+                }
+            }
+            & .logoCont{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 300px;
+                & img{
+                    width: 100%;
+                }
+            }
+        }
+        & .rBottom{
+            height: 65%;
+            background-color: #FCE1AF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & .contact{
+                height: 300px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                & .wrapper{
+                    height: 100%;
+                    & .contactLabel{
+                        color:  #FF7600;
+                        text-align: center;
+                        font-size: 1.9em;
+                        font-weight: 600;
+                        padding: 10px;
+                    }
+                    & .horizontal{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: start;
+                        height: 60px;
+                        & img{
+                            height: 45px;
+                            margin: 8px;
+                        }
+                        & h3, h5{
+                            margin: 0;
+                        }
+                        & h3{
+                            font-size: 1.7em;
+                            font-weight: 500;
+                        }
+                        & h5{
+                            font-size: 0.7em;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width:768px){ /* FIX THIS LATERRRR (TABLET) */
+    .menuSlide{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.2s ease;
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        width: 50%;
+        background: rgba(250,250,250, 0.5);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        z-index: 100;
+        & a{
+            /* color: #ff774a; */
+            color: black;
+            font-size: 1.3em;
+            text-decoration: none;
+
+        }
+        
+        & .menuCont2{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+        }
+        & .userDeets{
+            position: absolute;
+            top: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 20px;
+            *{
+                margin: 0;
+            }
+            & h1{
+                font-size: 1.3em;
+            }
+            & h2{
+                font-size: 0.9em;
+                font-weight: 400;
+            }
+        }
+    }
+    .menuIcon{
+        display: flex;
+        height: 40px;
+    }
+    body{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .left, .right{
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+    }
+    .left img{
+        display: none;
+    }
+    .left{
+        position: absolute;
+        background-image: url("images/image\ \(15\).png");
+
+    }
+    .right{
+        position: absolute;
+        padding: 0;
+        & .rTop{
+            /* position: relative; */
+            height: 35%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 119, 74,0.6);
+            background-image: url("images/anoter bg.png");
+            background-size: 250% 100%;
+            & .header{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 80px;
+                display: flex;
+                flex-direction: row;
+                justify-content: right;
+                align-items: center;
+                padding-top: 5px;
+                padding-left: 25px;
+                padding-right: 25px;
+                & * {
+                    margin: 0;
+                }
+                & a{
+                    display: none;
+                }
+                & .userIcon{
+                    display: none;
+                }
+            }
+            & .logoCont{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 50%;
+                & img{
+                    width: 100%;
+                }
+            }
+        }
+        & .rBottom{
+            height: 65%;
+            background-color: #FCE1AF;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            & .contact{
+                height: 420px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                & .wrapper{
+                    height: 100%;
+                    & .contactLabel{
+                        color:  #FF7600;
+                        text-align: center;
+                        font-size: 6vw;
+                        font-weight: 600;
+                        padding: 10px;
+                    }
+                    & .horizontal{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: start;
+                        height: 90px;
+                        & img{
+                            height: 10vw;
+                            margin: 8px;
+                        }
+                        & h3, h5{
+                            margin: 0;
+                        }
+                        & h3{
+                            font-size: 5vw;
+                            font-weight: 500;
+                        }
+                        & h5{
+                            font-size: 3.5vw;
+                            font-weight: 400;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

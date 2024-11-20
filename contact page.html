@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT PAGE</title>
+    <link rel="stylesheet" href="contact page.css">
+</head>
+<body>
+    <div class="menuSlide" id="menuSlide">
+        <div class="userDeets">
+            <img src="images/user icon.png" class="userrr" alt="">
+            <h1>Username</h1>
+            <h2>username@domain.ok</h2>
+        </div>
+        <div class="menuCont2">
+            <a href="about page.html">About</a>
+            <a href="blog page.html">Blog</a>
+            <a href="products page.html">Product</a>
+            <a href="contact page.html">Contact</a>
+        </div>
+    </div>
+    <div class="left">
+        <img src="images/image (15).png" alt="">
+    </div>
+    <div class="right">
+        <div class="rTop">
+            <div class="header">
+                <a href="about page.html">ABOUT</a>
+                <a href="blog page.html">BLOG</a>
+                <a href="products page.html">PRODUCT</a>
+                <a href="contact page.html">CONTACT</a>
+                <img src="images/user icon.png" alt="" class="userIcon">
+                <img src="images/menu.png" alt="" class="menuIcon" id="borgir">
+            </div>
+            <div class="logoCont">
+                <img src="images/pure white logo.png" alt="" id="logoImg"> 
+            </div>
+        </div>
+        <div class="rBottom">
+            <div class="contact">
+                <div class="wrapper">
+                    <div class="contactLabel">CONTACT US:</div>
+                <div class="horizontal">
+                    <div class="icon">
+                        <img src="images/location_on.png" alt="">
+                    </div>
+                    <div class="contactDeets">
+                        <h3>1110 Pearl Street. 4301</h3>
+                        <h5>Address</h5>
+                    </div>
+                </div>
+                <div class="horizontal">
+                    <div class="icon">
+                        <img src="images/location_on.png" alt="">
+                    </div>
+                    <div class="contactDeets">
+                        <h3>0943 135 8023</h3>
+                        <h5>Mobile</h5>
+                    </div>
+                </div>
+                <div class="horizontal">
+                    <div class="icon">
+                        <img src="images/location_on.png" alt="">
+                    </div>
+                    <div class="contactDeets">
+                        <h3>db.roastery@gmail.com</h3>
+                        <h5>Email</h5>
+                    </div>
+                </div>
+                <div class="horizontal">
+                    <div class="icon">
+                        <img src="images/location_on.png" alt="">
+                    </div>
+                    <div class="contactDeets">
+                        <h3>dbroasters</h3>
+                        <h5>Instagram</h5>
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("logoImg").addEventListener("click", ()=>{
+            window.location.href = "index.html";
+        });
+
+        let borgir = document.getElementById("borgir");
+        let menuSlide = document.getElementById("menuSlide");
+        let isToggled = false;
+
+        borgir.addEventListener("click", ()=>{
+            if(!isToggled){
+                menuSlide.style.left = "0";
+                isToggled = true;
+            }
+            else if(isToggled){
+                menuSlide.style.left = "-100%";
+                isToggled = false;
+            }
+        })
+    </script>
+
+</body>
+</html>
