@@ -1,0 +1,336 @@
+@font-face {
+    font-family: "Inter", "sans-serif";
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    src: url("https://fonts.googleapis.com");
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-image: url("images/triple\ bg.png");
+    background-size: 100vw 100vh;
+    font-family: "Inter";
+}
+
+button{
+    background-color: rgba(217, 217, 217, 0.8);
+    transition: 0.3s;
+    border: 1px black solid;
+}
+
+button:hover{
+    background-color: white;
+    filter: drop-shadow(0 0 10px rgba(10,10,10,0.8));
+}
+
+input{
+    transition: 0.3s;
+}
+
+.regLink a{
+    transition: 0.3s;
+    color: black;
+}
+
+.regLink a:hover{
+    color: white;
+    filter: drop-shadow(0 0 3px white);
+}
+
+button{
+    cursor: pointer;
+}
+
+@media (min-width:1024px){
+    .main{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 80%;
+        width: 80%;
+        border: 1px black solid;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        background-color: #EEB984;
+        overflow: scroll;
+        & .horizontal{
+            width: 100%;
+        }
+        & .label{
+            margin: 0;
+            font-size: 1.3em;
+            padding-left: 50px;
+            padding-top: 25px;
+        }
+        & .inputArea{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            & .subCont{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 80%;
+                & .inputCont{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    width: 45%;
+                    & input{
+                        font-size: 1.5em;
+                        font-weight: 400;
+                        background-color: rgba(217, 217, 217, 0.8);
+                        width: 100%;
+                        border: 1px black solid;
+                        border-radius: 15px;
+                        padding: 10px;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                    & label{
+                        padding: 5px;
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                }
+                & .inputCont input::placeholder{
+                    color: black;
+                    font-size: 75%;
+                }
+            }
+        }
+        & .regBtn{
+            padding-top: 3%;
+            padding-bottom: 0;
+            & button{
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 2vw;
+                font-weight: 600;
+                border-radius: 15px;
+                padding: 10px;
+                width: 15vw;
+            }
+        }
+        & .regLink{
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            & a{
+                text-decoration: none;
+                font-size: 1.5vw;
+                font-weight: 500;
+            }
+        }
+    }
+    
+    .main::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+@media (min-width:768px){
+    .main{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 80%;
+        width: 80%;
+        border: 1px black solid;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        background-color: #EEB984;
+        overflow: scroll;
+        & .horizontal{
+            width: 100%;
+        }
+        & .label{
+            margin: 0;
+            font-size: 0.75em;
+            padding-left: 50px;
+            padding-top: 25px;
+        }
+        & .inputArea{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px;
+            & .subCont{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 80%;
+                & .inputCont{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    width: 45%;
+                    & input{
+                        font-size: 1em;
+                        font-weight: 400;
+                        background-color: rgba(217, 217, 217, 0.8);
+                        width: 100%;
+                        border: 1px black solid;
+                        border-radius: 15px;
+                        padding: 10px;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                    & label{
+                        padding: 5px;
+                        font-size: 13px;
+                        font-weight: 600;
+                    }
+                }
+                & .inputCont input::placeholder{
+                    color: black;
+                    font-size: 75%;
+                }
+            }
+        }
+        & .regBtn{
+            padding-top: 3%;
+            padding-bottom: 0;
+            & button{
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 1.3vw;
+                font-weight: 600;
+                border-radius: 15px;
+                padding: 10px;
+                width: 12vw;
+            }
+        }
+        & .regLink{
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            & a{
+                text-decoration: none;
+                font-size: 1.2vw;
+                font-weight: 500;
+            }
+        }
+    }
+    
+    .main::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+@media (max-width:768px){
+    .main{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 80%;
+        width: 80%;
+        border: 1px black solid;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        background-color: #EEB984;
+        overflow: scroll;
+        & .horizontal{
+            width: 100%;
+            padding: 10px;
+        }
+        & .label{
+            margin: 0;
+            font-size: 3vw;
+            text-align: center;
+        }
+        & .inputArea{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            /* padding: 10px; */
+            & .subCont{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                & .inputCont{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    width: 80%;
+                    & input{
+                        font-size: 1.5em;
+                        font-weight: 400;
+                        background-color: rgba(217, 217, 217, 0.8);
+                        width: 100%;
+                        border: 1px black solid;
+                        border-radius: 15px;
+                        padding: 10px;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                    & label{
+                        padding: 5px;
+                        font-size: 3vw;
+                        font-weight: 600;
+                    }
+                }
+                & .inputCont input::placeholder{
+                    color: black;
+                    font-size: 75%;
+                }
+            }
+        }
+        & .regBtn{
+            padding-top: 3%;
+            padding-bottom: 0;
+            & button{
+                position: relative;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 3.5vw;
+                font-weight: 600;
+                border-radius: 15px;
+                padding: 10px;
+                width: 35vw;
+            }
+        }
+        & .regLink{
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            & a{
+                text-decoration: none;
+                font-size: 3vw;
+                font-weight: 500;
+                padding-bottom: 2vh;
+            }
+        }
+    }
+    
+    .main::-webkit-scrollbar{
+        display: none;
+    }
+}

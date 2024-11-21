@@ -9,7 +9,7 @@
 <body>
     <div class="menuSlide" id="menuSlide">
         <div class="userDeets">
-            <img src="images/user icon.png" class="userrr" alt="">
+            <img src="images/user icon.png" class="userrr" alt="" id="userIcon">
             <h1>Username</h1>
             <h2>username@domain.ok</h2>
         </div>
@@ -32,7 +32,7 @@
                     <a href="contact page.html">Contact</a>
                 </div>
     
-                <img src="images/user icon.png" alt="" class="icon">
+                <img src="images/user icon.png" alt="" class="icon" id="userIcon2">
                 <img src="images/menu.png" alt="" class=" borgir" id="borgir">
 
             </div>
@@ -40,7 +40,7 @@
     </header>
     
     <div class="btnWrapper">
-        <button class="orderNow">ORDER NOW</button>
+        <button class="orderNow" id="orderNow" style="cursor: pointer;">ORDER NOW</button>
     </div>
 
     <script>
@@ -68,6 +68,16 @@
                 menuSlide.style.left = "-100%";
                 menuToggle = false;
             }
+        })
+
+        document.getElementById("userIcon").addEventListener("click", ()=>{
+            window.location.href = "login page.html"
+        })
+        document.getElementById("userIcon2").addEventListener("click", ()=>{
+            window.location.href = "login page.html"
+        })
+        document.getElementById("orderNow").addEventListener("click", ()=>{
+            window.location.href = "products page.html"
         })
     </script>
 

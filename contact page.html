@@ -9,7 +9,7 @@
 <body>
     <div class="menuSlide" id="menuSlide">
         <div class="userDeets">
-            <img src="images/user icon.png" class="userrr" alt="">
+            <img src="images/user icon.png" class="userrr" alt="" id="userIcon">
             <h1>Username</h1>
             <h2>username@domain.ok</h2>
         </div>
@@ -30,7 +30,7 @@
                 <a href="blog page.html">BLOG</a>
                 <a href="products page.html">PRODUCT</a>
                 <a href="contact page.html">CONTACT</a>
-                <img src="images/user icon.png" alt="" class="userIcon">
+                <img src="images/user icon.png" alt="" class="userIcon" id="userIcon2">
                 <img src="images/menu.png" alt="" class="menuIcon" id="borgir">
             </div>
             <div class="logoCont">
@@ -41,7 +41,7 @@
             <div class="contact">
                 <div class="wrapper">
                     <div class="contactLabel">CONTACT US:</div>
-                <div class="horizontal">
+                <div class="horizontal" id="loc">
                     <div class="icon">
                         <img src="images/location_on.png" alt="">
                     </div>
@@ -68,7 +68,7 @@
                         <h5>Email</h5>
                     </div>
                 </div>
-                <div class="horizontal">
+                <div class="horizontal" id="ig">
                     <div class="icon">
                         <img src="images/location_on.png" alt="">
                     </div>
@@ -101,6 +101,20 @@
                 menuSlide.style.left = "-100%";
                 isToggled = false;
             }
+        })
+
+        document.getElementById("ig").onclick = function(){
+            window.location.href = "https://www.instagram.com/dbroasters/"
+        }
+        document.getElementById("loc").onclick = function(){
+            window.location.href = "https://maps.app.goo.gl/Hp3W5zHNmQGN1CV2A"
+        }
+
+        document.getElementById("userIcon").addEventListener("click", ()=>{
+            window.location.href = "login page.html"
+        })
+        document.getElementById("userIcon2").addEventListener("click", ()=>{
+            window.location.href = "login page.html"
         })
     </script>
 

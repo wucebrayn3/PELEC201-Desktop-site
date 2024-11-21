@@ -23,6 +23,14 @@ body, html{
     position: relative;
 }
 
+.logoImg{
+    cursor: pointer;
+}
+
+.icon{
+    cursor: pointer;
+}
+
 .borgir{
     display: none;
 }
@@ -52,6 +60,7 @@ header, .headerWrapper{
 .menuCont a{
     transition: 0.3s;
     font-family: "Inter", "sans-serif";
+    
 }
 
 .menuCont a:hover{

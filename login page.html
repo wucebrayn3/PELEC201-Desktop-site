@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+    <link rel="stylesheet" href="login page.css">
+</head>
+<body>
+    <div class="main">
+        <div class="horizontal logoCont">
+            <img src="images/DB Primary Logo.png" alt="">
+        </div>
+        <div class="horizontal inputArea">
+            <div class="subCont">
+                <label for="un">Username:</label>
+                <input type="text" name="" id="un" placeholder="Username">
+            </div>
+        </div>
+        <div class="horizontal inputArea">
+            <div class="subCont">
+                <label for="un">Password:</label>
+                <input type="password" name="" id="pw" placeholder="Password">
+            </div>
+        </div>
+        <div class="horizontal logBtn">
+            <button id="logBtn">LOGIN</button>
+        </div>
+        <div class="horizontal logLink">
+            <a href="register page.html">Create an account here</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("logBtn").addEventListener("click", ()=>{
+            window.location.href = "index.html"
+        })
+    </script>
+</body>
+</html>

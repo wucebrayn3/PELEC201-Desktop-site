@@ -1,0 +1,310 @@
+body,html{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-image: url("images/triple\ bg.png");
+    background-size: 100vw 100vh;
+    font-family: "Inter";
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.main{
+    overflow: scroll;
+}
+
+.main::-webkit-scrollbar{
+    display: none;
+}
+
+button{
+    background-color: rgba(217, 217, 217, 0.8);
+    transition: 0.3s;
+}
+
+button:hover{
+    filter: drop-shadow(0 0 10px rgba(10,10,10,0.8));
+}
+
+a{
+    color: black;
+    transition: 0.3s;
+}
+
+a:hover{
+    color: white;
+    filter: drop-shadow(0 0 5px white);
+}
+
+
+button{
+    cursor: pointer;
+}
+
+@media (min-width: 1439px){
+    .main{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border: 1px black solid;
+    border-radius: 25px;
+    background-color: #EEB984;
+    & .horizontal{
+        width: 100%;;
+    }
+    & .logoCont{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        /* padding-bottom: 10%; */
+        margin-bottom: 1vh;
+    }
+    & .logoCont img{
+        margin: 0;
+        /* height: 10%; */
+        width: 23%;
+        aspect-ratio: 1/1;
+        border: 1px black solid;
+        border-radius: 1000px;
+        margin-top: 10%;
+        margin-bottom: 2%;
+    }
+    & .inputArea{
+        margin-bottom: 2vh;
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        & .subCont{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+        }
+        & input{
+            font-size: 1.5em;
+            font-weight: 400;
+            background-color: rgba(217, 217, 217, 0.8);
+            width: 100%;
+            border: 1px black solid;
+            border-radius: 15px;
+            padding: 10px;            
+            padding-left: 30px;            
+            padding-right: 30px;            
+        }
+        & input::placeholder{
+            color: black;
+            font-size: 75%;
+        }
+        & label{
+            padding: 5px;
+            font-size: 1.2vw;
+            font-weight: 600;
+        }
+    }
+    & .logBtn{
+        display: flex;
+        justify-content: center;
+        & button{
+            width: 10vw;
+            font-size: 1.6vw;
+            font-weight: 600;
+            border: 1px black solid;
+            border-radius: 10px;
+            padding: 5px;
+        }
+    }
+    & .logLink{
+        display: flex;
+        justify-content: center;
+        & a{
+            text-decoration: none;
+            padding: 5px;
+            font-size: 1.2vw;
+        }
+    }
+}
+}
+
+@media (min-width:769px) and (max-width:1439px){
+    .main{
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 80%;
+        border: 1px black solid;
+        border-radius: 25px;
+        background-color: #EEB984;
+        & .horizontal{
+            width: 100%;;
+        }
+        & .logoCont{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        & .logoCont img{
+            margin: 0;
+            /* height: 10%; */
+            width: 18%;
+            aspect-ratio: 1/1;
+            border: 1px black solid;
+            border-radius: 1000px;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+        & .inputArea{
+            height: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            & .subCont{
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+            }
+            & input{
+                font-size: 1.2em;
+                font-weight: 400;
+                background-color: rgba(217, 217, 217, 0.8);
+                width: 100%;
+                border: 1px black solid;
+                border-radius: 15px;
+                padding: 10px;            
+                padding-left: 30px;            
+                padding-right: 30px;            
+            }
+            & input::placeholder{
+                color: black;
+                font-size: 75%;
+            }
+            & label{
+                padding: 5px;
+                font-size: 1.2vw;
+                font-weight: 600;
+            }
+        }
+    }
+    .logBtn{
+        padding-top: 10px;
+        display: flex;
+        justify-content: center;
+        & button{
+            width: 12vw;
+            font-size: 1.3vw;
+            font-weight: 600;
+            border: 1px black solid;
+            border-radius: 15px;
+            padding: 10px;
+            margin-top: 4vh;
+        }
+    }
+    .logLink{
+        display: flex;
+        justify-content: center;
+        & a{
+            text-decoration: none;
+            font-size: 1.2vw;
+            padding: 5px;
+        }
+    }
+}
+@media (max-width:768px){
+    .main{
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 80%;
+        border: 1px black solid;
+        border-radius: 25px;
+        background-color: #EEB984;
+        & .horizontal{
+            width: 100%;;
+        }
+        & .logoCont{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        & .logoCont img{
+            margin: 0;
+            /* height: 10%; */
+            width: 25vw;
+            aspect-ratio: 1/1;
+            border: 1px black solid;
+            border-radius: 1000px;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+        }
+        & .inputArea{
+            height: 15vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            & .subCont{
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+            }
+            & input{
+                font-size: 3vw;
+                font-weight: 400;
+                background-color: rgba(217, 217, 217, 0.8);
+                width: 100%;
+                border: 1px black solid;
+                border-radius: 15px;
+                padding: 10px;            
+                padding-left: 30px;            
+                padding-right: 30px;            
+            }
+            & input::placeholder{
+                color: black;
+                font-size: 2.3vw;
+            }
+            & label{
+                padding: 5px;
+                font-size: 2.5vw;
+                font-weight: 600;
+            }
+        }
+    }
+    .logBtn{
+        padding-top: 3vh;
+        display: flex;
+        justify-content: center;
+        & button{
+            width: 18vw;
+            font-size: 2.5vw;
+            font-weight: 600;
+            border: 1px black solid;
+            border-radius: 10px;
+            padding: 5px;
+        }
+    }
+    .logLink{
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        & a{
+            text-decoration: none;
+            font-size: 2vw;
+            padding: 5px;
+        }
+    }
+}

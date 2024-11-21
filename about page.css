@@ -30,6 +30,10 @@ body::-webkit-scrollbar{
     display: none;
 }
 
+.icon, .logoImg{
+    cursor: pointer;
+}
+
 header, .headerWrapper{
     position: fixed;
     height: 80px;

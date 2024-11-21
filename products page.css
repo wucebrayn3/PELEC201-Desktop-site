@@ -69,6 +69,12 @@ main::-webkit-scrollbar{
     display: none;
 }
 
+
+.icon, .logoImg, button{
+    cursor: pointer;
+}
+
+
 .menuLabelCont{
     width: 100%;
     display: flex;

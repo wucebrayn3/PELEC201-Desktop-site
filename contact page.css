@@ -23,6 +23,42 @@ body,html{
     flex-wrap: nowrap; */
 }
 
+.userIcon{
+    cursor: pointer;
+}
+
+#logoImg{
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+#logoImg:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px rgba(10,10,10,0.8));
+}
+
+.horizontal{
+    transition: 0.3s ease;
+    background-color: #FCE1AF;
+    cursor: pointer;
+}
+
+.horizontal:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(10,10,10,0.8);
+}
+
+.header a{
+    color: #842E01;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.header a:hover{
+    color: white;
+    filter: drop-shadow(0 0 5px white);
+}
+
 .menuSlide{
     /* position: fixed; */
     display: none;
@@ -84,7 +120,7 @@ body::-webkit-scrollbar{
                     text-decoration: none;
                     font-size: 1.25em;
                     font-weight: 600;
-                    color: #842E01;
+
                 }
             }
             & .logoCont{
@@ -195,7 +231,7 @@ body::-webkit-scrollbar{
                     text-decoration: none;
                     font-size: 1.1em;
                     font-weight: 600;
-                    color: #842E01;
+
                 }
                 & img{
                     height: 50px;
@@ -317,7 +353,6 @@ body::-webkit-scrollbar{
                     text-decoration: none;
                     font-size: 1.1em;
                     font-weight: 600;
-                    color: #842E01;
                 }
                 & img{
                     height: 50px;
@@ -439,10 +474,7 @@ body::-webkit-scrollbar{
             }
         }
     }
-    .menuIcon{
-        display: flex;
-        height: 40px;
-    }
+    
     body{
         flex-direction: column;
         flex-wrap: nowrap;
@@ -495,6 +527,10 @@ body::-webkit-scrollbar{
                 & .userIcon{
                     display: none;
                 }
+                & .menuIcon{
+                    display: flex;
+                    height: 35%;
+                }
             }
             & .logoCont{
                 display: flex;
@@ -514,7 +550,7 @@ body::-webkit-scrollbar{
             justify-content: center;
             align-items: center;
             & .contact{
-                height: 420px;
+                /* height: 420px; */
                 width: 100%;
                 display: flex;
                 flex-direction: column;
@@ -525,29 +561,29 @@ body::-webkit-scrollbar{
                     & .contactLabel{
                         color:  #FF7600;
                         text-align: center;
-                        font-size: 6vw;
+                        font-size: 4vw;
                         font-weight: 600;
-                        padding: 10px;
+                        padding: 1px;
                     }
                     & .horizontal{
                         display: flex;
                         flex-direction: row;
                         align-items: center;
                         justify-content: start;
-                        height: 90px;
+                        height: 40px;
                         & img{
-                            height: 10vw;
+                            height: 6vw;
                             margin: 8px;
                         }
                         & h3, h5{
                             margin: 0;
                         }
                         & h3{
-                            font-size: 5vw;
+                            font-size: 3.5vw;
                             font-weight: 500;
                         }
                         & h5{
-                            font-size: 3.5vw;
+                            font-size: 2vw;
                             font-weight: 400;
                         }
                     }
